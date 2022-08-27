@@ -5,10 +5,10 @@ public class AppGestorTareas {
 		TareaPeriodica tp = new TareaPeriodica(1);
 		TPAviso tpa = new TPAviso("Estudiar Principios de la Herencia!", 2);
 		while (!tp.necesitaEjecucion())
-			System.out.println("Esperando ejecución de tarea periódica...");
+			System.out.println("Esperando ejecuciÃ³n de tarea periÃ³dica...");
 		tp.ejecutarTarea();
 		while (!tpa.necesitaEjecucion())
-			System.out.println("Esperando ejecución de aviso...");
+			System.out.println("Esperando ejecuciÃ³n de aviso...");
 		System.out.println("Aviso: " + tpa.leerMsg());
 	}
 }
