@@ -12,7 +12,7 @@ public class TPEjecucion extends TareaPeriodica {
 	public String leerCmd() {
 		return cmd;
 	}
-	// Método redefinido
+	// MÃ©todo redefinido
 	public void ejecutarTarea() {
 		try {
 			Runtime.getRuntime().exec(cmd);

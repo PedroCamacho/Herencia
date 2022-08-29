@@ -3,11 +3,11 @@ package Paso3;
 import java.util.*;
 
 public class TareaPeriodica {
-	protected int periodoSegs; // Periodo de ejecuci髇
-	protected Date ultimaEj; // Hora de 鷏tima ejecuci髇
+	protected int periodoSegs; // Periodo de ejecuci贸n
+	protected Date ultimaEj; // Hora de 煤ltima ejecuci贸n
 	protected  boolean activa; // bandera de estado activo/inactivo
 
-	// Constructor gen閞ico
+	// Constructor gen茅rico
 	public TareaPeriodica(int aPeriodoSegs) {
 		periodoSegs = aPeriodoSegs;
 		actualizarReloj();
@@ -19,7 +19,7 @@ public class TareaPeriodica {
 		this(1);
 	}
 
-	// Establecer la 鷏tima ejecuci髇 a la hora actual
+	// Establecer la 煤ltima ejecuci贸n a la hora actual
 	public void actualizarReloj() {
 		ultimaEj = new Date(); // Hora actual
 	}
@@ -27,7 +27,7 @@ public class TareaPeriodica {
 	public boolean necesitaEjecucion() {
 		if (!activa)
 			return false;
-		// Calcular la hora de la pr髕ima ejecuci髇
+		// Calcular la hora de la pr贸xima ejecuci贸n
 		Calendar calProximaEj = new GregorianCalendar();
 		calProximaEj.setTime(ultimaEj);
 		calProximaEj.add(Calendar.SECOND, periodoSegs);
@@ -38,7 +38,7 @@ public class TareaPeriodica {
 
 	public void ejecutarTarea() {
 		for (int i = 0; i < 10000; i++) 
-			System.out.println("Ejecucion de tarea gen閞ica !!!!!!!!!!!!!!");	
+			System.out.println("Ejecucion de tarea gen茅rica !!!!!!!!!!!!!!");	
 	}
 
 	public void activar() {

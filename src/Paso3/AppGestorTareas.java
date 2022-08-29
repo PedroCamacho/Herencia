@@ -3,19 +3,19 @@ package Paso3;
 public class AppGestorTareas {
 	public static void main(String[] args) {
 		TareaPeriodica tp = new TareaPeriodica(1);
-		TPAviso tpa = new TPAviso("Estudiar Programaci髇 Avanzada !", 2);
+		TPAviso tpa = new TPAviso("Estudiar Programaci贸n Avanzada !", 2);
 		TPEjecucion tpe = new TPEjecucion("calc.exe", 5);
 
 		while (!tp.necesitaEjecucion())
-			System.out.println("Esperando ejecuci髇 de tarea peri骴ica...");
+			System.out.println("Esperando ejecuci贸n de tarea peri贸dica...");
 		tp.ejecutarTarea();
 
 		while (!tpa.necesitaEjecucion())
-			System.out.println("Esperando ejecuci髇 de aviso...");
+			System.out.println("Esperando ejecuci贸n de aviso...");
 		tpa.ejecutarTarea();
 
 		while (!tpe.necesitaEjecucion())
-			System.out.println("Esperando ejecuci髇 de comando...");
+			System.out.println("Esperando ejecuci贸n de comando...");
 		tpe.ejecutarTarea();
 
 	}

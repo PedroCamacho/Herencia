@@ -10,10 +10,10 @@ public class TPAviso extends TareaPeriodica {
 	public String leerMsg() {
 		return msg;
 	}
-	// M�todo redefinido
+	// Método redefinido
 	@Override
 	public void ejecutarTarea() {
-		System.out.println("ATENCI�N AVISO: " + msg);
+		System.out.println("ATENCIÓN AVISO: " + msg);
 		desactivar();
 	}
 

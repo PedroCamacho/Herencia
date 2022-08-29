@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class TPEjecucion implements TareaPeriodica {
-	private int periodoSegs; // Periodo de ejecuci髇
-	private Date ultimaEj; // Hora de 鷏tima ejecuci髇
+	private int periodoSegs; // Periodo de ejecuci贸n
+	private Date ultimaEj; // Hora de 煤ltima ejecuci贸n
 	private boolean activa; // bandera de estado activo/inactivo
 	private String cmd;
 
@@ -20,7 +20,7 @@ public class TPEjecucion implements TareaPeriodica {
 	public String leerCmd() {
 		return cmd;
 	}
-	// M閠odo implementado
+	// M茅todo implementado
 	public void ejecutarTarea() {
 		try {
 			Runtime.getRuntime().exec(cmd);
@@ -29,11 +29,11 @@ public class TPEjecucion implements TareaPeriodica {
 			System.out.println("Imposible ejecutar comando: "+ cmd);
 		}
 	}
-	// M閠odo implementado
+	// M茅todo implementado
 	public boolean necesitaEjecucion() {
 		if (!activa)
 			return false;
-		// Calcular la hora de la pr髕ima ejecuci髇
+		// Calcular la hora de la pr贸xima ejecuci贸n
 		Calendar calProximaEj = new GregorianCalendar();
 		calProximaEj.setTime(ultimaEj);
 		calProximaEj.add(Calendar.SECOND, periodoSegs);
@@ -42,12 +42,12 @@ public class TPEjecucion implements TareaPeriodica {
 		return (calProximaEj.before(calAhora));
 	}
 
-	// M閠odo implementado
+	// M茅todo implementado
 	public void activar() {
 		activa = true;
 	}
 
-	// M閠odo implementado
+	// M茅todo implementado
 	public void desactivar() {
 		activa = false;
 	}

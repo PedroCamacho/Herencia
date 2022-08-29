@@ -12,7 +12,7 @@ public class TPReloj extends TareaPeriodica {
 		Calendar cal = new GregorianCalendar();
 		return cal.get(Calendar.HOUR_OF_DAY) + ":" + cal.get(Calendar.MINUTE);
 	}
-	// Método redefinido
+	// MÃ©todo redefinido
 	public void ejecutarTarea() {
 		Calendar cal = new GregorianCalendar();
 		int min = cal.get(Calendar.MINUTE);

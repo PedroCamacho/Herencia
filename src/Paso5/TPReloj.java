@@ -20,7 +20,7 @@ public class TPReloj implements TareaPeriodica {
 		return cal.get(Calendar.HOUR_OF_DAY) + ":" + cal.get(Calendar.MINUTE);
 	}
 
-	// Método implementado
+	// MÃ©todo implementado
 	public void ejecutarTarea() {
 		Calendar cal = new GregorianCalendar();
 		int min = cal.get(Calendar.MINUTE);
@@ -28,11 +28,11 @@ public class TPReloj implements TareaPeriodica {
 		ultimaEj = cal.getTime();
 	}
 
-	// Método implementado
+	// MÃ©todo implementado
 	public boolean necesitaEjecucion() {
 		if (!activa)
 			return false;
-		// Calcular la hora de la próxima ejecución
+		// Calcular la hora de la prÃ³xima ejecuciÃ³n
 		Calendar calProximaEj = new GregorianCalendar();
 		calProximaEj.setTime(ultimaEj);
 		calProximaEj.add(Calendar.SECOND, periodoSegs);
@@ -41,12 +41,12 @@ public class TPReloj implements TareaPeriodica {
 		return (calProximaEj.before(calAhora));
 	}
 
-	// Método implementado
+	// MÃ©todo implementado
 	public void activar() {
 		activa = true;
 	}
 
-	// Método implementado
+	// MÃ©todo implementado
 	public void desactivar() {
 		activa = false;
 	}

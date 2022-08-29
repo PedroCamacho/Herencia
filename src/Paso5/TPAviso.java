@@ -19,16 +19,16 @@ public class TPAviso implements TareaPeriodica {
 	public String leerMsg() {
 		return msg;
 	}
-	// Método implementado
+	// MÃ©todo implementado
 	public void ejecutarTarea() {
-		System.out.println("ATENCIÓN AVISO: " + msg);
+		System.out.println("ATENCIÃ“N AVISO: " + msg);
 		desactivar();
 	}
-	// Método implementado
+	// MÃ©todo implementado
 	public boolean necesitaEjecucion() {
 		if (!activa)
 			return false;
-		// Calcular la hora de la próxima ejecución
+		// Calcular la hora de la prÃ³xima ejecuciÃ³n
 		Calendar calProximaEj = new GregorianCalendar();
 		calProximaEj.setTime(ultimaEj);
 		calProximaEj.add(Calendar.SECOND, periodoSegs);
@@ -37,12 +37,12 @@ public class TPAviso implements TareaPeriodica {
 		return (calProximaEj.before(calAhora));
 	}
 
-	// Método implementado
+	// MÃ©todo implementado
 	public void activar() {
 		activa = true;
 	}
 
-	// Método implementado
+	// MÃ©todo implementado
 	public void desactivar() {
 		activa = false;
 	}
